@@ -1,5 +1,6 @@
 import kotlin.properties.Delegates
 
+//Shahzada Stamova
 fun main(){
 
     var num = readLine()!!.toCharArray()
