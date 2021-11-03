@@ -1,39 +1,40 @@
 import java.lang.ArithmeticException
 
+//Shahzada Stamova
+
+var i1: Double = 0.0
+var i2: Double = 0.0
+
 fun main() {
 
-    //Shahzada Stamova
-    var ff: String
-    var i1: Double
-    var i2: Double
+    try {
+        println("Введите первое число: ")
+        i1 = readLine()!!.toDouble()
+        println("Введите второе число:")
+        i2 = readLine()!!.toDouble()
+    } catch (e: NumberFormatException) {
+        println("Вводите только число!")
+    }
 
-    println("What operation?")
-    ff = readLine().toString()
+    println("Какая операция?")
+    val operation = readLine().toString()
 
-    when (ff) {
-        "+" -> print("Сложение ${i1 + i2}")
-        "-" -> print("Вычитание ${i1-i2}")
-        "*" -> print("Умножение ${i1*i2}")
+    when (operation) {
+        "+" -> print("Сложение = ${i1+i2}")
+        "-" -> print("Вычитание = ${i1-i2}")
+        "*" -> print("Умножение = ${i1*i2}")
         "/" -> divide()
     }
 }
 
 private fun divide(){
-    var i1: Double = readLine()!!.toDouble()
-    var i2: Double = readLine()!!.toDouble()
-    println(div(i1, i2))
+    div(i1, i2)
 }
 
-private fun div(i1: Double, i2: Double): String {
+private fun div(i1: Double, i2: Double) {
     try {
-        println("res = ${i1 / i2}")
+        println("Деление = ${i1 / i2}")
     } catch (e: ArithmeticException) {
-        "Don't 0!"
+        println("На ноль делить нельзя!")
     }
 }
-
-//private fun String.parseToInt(): Int {
-//    if (this == "") return 0
-//    //
-//    return
-//}
