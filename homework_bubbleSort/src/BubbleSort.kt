@@ -17,7 +17,7 @@ fun IntArray.bubbleSort() {
     var sorted = false
     while (!sorted) {
         sorted = true
-    for (i in 1 until this.size)
+    for (i in 1 until this.size) // не учитываются отсортированные границы
     {
         val current = this[i]
         val previous = this[i - 1]
@@ -26,5 +26,5 @@ fun IntArray.bubbleSort() {
             sorted = false
         }
     }
-    }
+    } // не отформатирован код
 }
