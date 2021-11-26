@@ -2,16 +2,16 @@ import java.lang.ArithmeticException
 
 //Shahzada Stamova
 
-var i1: Double = 0.0
-var i2: Double = 0.0
+var i1: Int = 0
+var i2: Int = 0
 
 fun main() {
 
     try {
         println("Введите первое число: ")
-        i1 = readLine()!!.toDouble()
+        i1 = readLine()!!.toInt()
         println("Введите второе число:")
-        i2 = readLine()!!.toDouble()
+        i2 = readLine()!!.toInt()
     } catch (e: NumberFormatException) {
         println("Вводите только число!")
     }
@@ -20,18 +20,22 @@ fun main() {
     val operation = readLine().toString()
 
     when (operation) {
-        "+" -> print("Сложение = ${i1+i2}")
-        "-" -> print("Вычитание = ${i1-i2}")
-        "*" -> print("Умножение = ${i1*i2}")
-        "/" -> divide()
+            "+" -> print("Сложение = ${i1 + i2}")
+            "-" -> print("Вычитание = ${i1 - i2}")
+            "*" -> print("Умножение = ${i1 * i2}")
+            "/" -> divide()
+         else -> {
+             println("Неверная операция!")
+         }
     }
-}
+    }
+
 
 private fun divide(){
     div(i1, i2)
 }
 
-private fun div(i1: Double, i2: Double) {
+private fun div(i1: Int, i2: Int) {
     try {
         println("Деление = ${i1 / i2}")
     } catch (e: ArithmeticException) {
