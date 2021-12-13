@@ -39,6 +39,6 @@ private fun div(i1: Int, i2: Int) {
     try {
         println("Деление = ${i1 / i2}")
     } catch (e: ArithmeticException) {
-        println("На ноль делить нельзя!")
+        println("На ноль делить нельзя!") // ArithmeticException не бросится, соответственно эта строчка никогда не вызовется
     }
 }
